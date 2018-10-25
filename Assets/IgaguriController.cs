@@ -9,6 +9,11 @@ public class IgaguriController : MonoBehaviour {
 		GetComponent<Rigidbody>().AddForce(dir);
 	}
 
+	private void OnCollisionEnter(Collision other)
+	{
+		GetComponent<Rigidbody>().isKinematic = true;	
+	}
+
 	// Use this for initialization
 	void Start () {
 		Shoot(new Vector3(0, 200, 2000));
