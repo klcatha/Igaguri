@@ -11,7 +11,8 @@ public class IgaguriController : MonoBehaviour {
 
 	private void OnCollisionEnter(Collision other)
 	{
-		GetComponent<Rigidbody>().isKinematic = true;	
+		GetComponent<Rigidbody>().isKinematic = true;
+		GetComponent<ParticleSystem>().Play();
 	}
 
 	// Use this for initialization
